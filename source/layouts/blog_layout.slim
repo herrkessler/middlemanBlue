@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"
+    title= current_page.data.title || "The Middleman"
+
+    == partial "partials/loadcss"
+    == javascript_include_tag  "all", async: true
+
+  body.blog class="#{page_classes}"
+
+    nav
+      == partial "partials/navigation"
+
+    main
+      article#article
+        .container
+          == yield
+
+    footer
+      == partial "partials/footer"
+
+    == partial "partials/modal"

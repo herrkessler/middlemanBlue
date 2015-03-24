@@ -1,0 +1,17 @@
+.outer-container
+  +outer-container
+
+.row
+  +row
+
+html, body
+  background: #eee
+  color: black
+
+.grid-half
+  +span-columns(6)
+  +omega(2n)
+  margin-top: 100px
+  +media($mobile)
+    +span-columns(12)
+    +omega
